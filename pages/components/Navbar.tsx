@@ -1,11 +1,12 @@
 import Link from "next/link";
+import { Navbar } from '@mantine/core';
 
-export default function Navbar() {
+export default function NavbarEle() {
   return (
-    <div>
-      <Link href="/test">
-        <a href="#">test</a>
-      </Link>
-    </div>
+      <Navbar height={600} p="xs" width={{ base: 300 }}>
+        <Navbar.Section>test</Navbar.Section>
+        <Navbar.Section grow mt="md">test</Navbar.Section>
+        <Navbar.Section>test</Navbar.Section>
+      </Navbar>
   )
 }

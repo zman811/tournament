@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
-import Navbar from "./components/Navbar";
+import NavbarEle from "./components/Navbar";
 import Head from "next/head";
 
 const Home: NextPage = () => {
   return (
     <>
-      <Navbar />
+      <NavbarEle />
       <div>
         Hello!
         <a href="/api/auth/login">Login</a>
