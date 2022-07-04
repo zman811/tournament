@@ -1,12 +1,26 @@
 import Link from "next/link";
-import { Navbar } from '@mantine/core';
+import { Button, Container, Grid, Menu } from "@mantine/core";
+import { NextLink } from "@mantine/next";
 
 export default function NavbarEle() {
   return (
-      <Navbar height={600} p="xs" width={{ base: 300 }}>
-        <Navbar.Section>test</Navbar.Section>
-        <Navbar.Section grow mt="md">test</Navbar.Section>
-        <Navbar.Section>test</Navbar.Section>
-      </Navbar>
-  )
+    <Container fluid>
+      <Grid justify="center" align="flex-start">
+        <Grid.Col span={4}>Home</Grid.Col>
+        <Grid.Col span={4} offset={4}>
+          <Grid>
+            <Grid.Col span={4}>test</Grid.Col>
+            <Grid.Col span={4}>test</Grid.Col>
+            <Grid.Col span={4}>
+              <Menu control={<Button>Menu</Button>}>
+                <Menu.Item component={NextLink} href="/api/auth/logout">
+                  logout
+                </Menu.Item>
+              </Menu>
+            </Grid.Col>
+          </Grid>
+        </Grid.Col>
+      </Grid>
+    </Container>
+  );
 }
