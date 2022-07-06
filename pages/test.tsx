@@ -21,6 +21,7 @@ export const getServerSideProps = withPageAuthRequired({
   getServerSideProps: async ({ req, res }) => {
     const user = getSession(req, res);
     console.log(user);
+    // Need to add in a database to store user info for auth and other info
 
     return {
       props: {},

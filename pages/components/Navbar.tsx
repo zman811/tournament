@@ -4,6 +4,7 @@ import { NextLink } from "@mantine/next";
 import { useUser } from "@auth0/nextjs-auth0";
 
 export default function NavbarEle() {
+  // Route to all pages here in the menu
   const { user } = useUser();
   let name = "";
   if (user) {
