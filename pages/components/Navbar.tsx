@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button, Container, Grid, Menu } from "@mantine/core";
+import { Anchor, Button, Container, Grid, Menu } from "@mantine/core";
 import { NextLink } from "@mantine/next";
 import { useUser } from "@auth0/nextjs-auth0";
 
@@ -15,20 +15,28 @@ export default function NavbarEle() {
     <Container fluid>
       <Grid justify="center" align="flex-start">
         <Grid.Col span={4}>
-          <Link href="/">Home</Link>
+          <Link href="/">
+            <Anchor style={{ fontWeight: "bold" }}>Home</Anchor>
+          </Link>
         </Grid.Col>
         <Grid.Col span={5} offset={3}>
           <Grid>
             <Grid.Col span={4}></Grid.Col>
-            <Grid.Col span={4}>{name}</Grid.Col>
+            <Grid.Col span={4}>
+              <Link href="/user/${name}">
+                <Anchor>{name}</Anchor>
+              </Link>
+            </Grid.Col>
             <Grid.Col span={4}>
               <Menu control={<Button>Menu</Button>}>
                 <Menu.Item component={NextLink} href="/test">
                   test
                 </Menu.Item>
-                <Menu.Item component={NextLink} href="/api/auth/logout">
-                  logout
-                </Menu.Item>
+                {user?.email && (
+                  <Menu.Item component={NextLink} href="/api/auth/logout">
+                    logout
+                  </Menu.Item>
+                )}
               </Menu>
             </Grid.Col>
           </Grid>
