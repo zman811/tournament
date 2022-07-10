@@ -14,10 +14,10 @@ const Home: NextPage = () => {
       <Space h="xl" />
       <Center style={{ textAlign: "center" }}>
         <Container>
-          <Title order={2}>Name of the app here,</Title>
+          <Title order={1}>Name of the app here,</Title>
           {!user?.email && (
             <Link href="/api/auth/login">
-              <Title order={3}>
+              <Title order={2}>
                 <Anchor>Login</Anchor>
               </Title>
             </Link>

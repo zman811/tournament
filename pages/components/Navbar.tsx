@@ -33,9 +33,14 @@ export default function NavbarEle() {
                   test
                 </Menu.Item>
                 {user?.email && (
+                  <>
+                  <Menu.Item component={NextLink} href="/homePage">
+                    User Page
+                  </Menu.Item>
                   <Menu.Item component={NextLink} href="/api/auth/logout">
                     logout
                   </Menu.Item>
+                  </>
                 )}
               </Menu>
             </Grid.Col>
