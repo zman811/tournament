@@ -19,6 +19,7 @@ const Home: NextPage = () => {
             <Link href="/api/auth/login">
               <Title order={2}>
                 <Anchor>Login</Anchor>
+                {/* After login maybe route to homePage as that will the the users home page, also go there if they are logged in */}
               </Title>
             </Link>
           )}
