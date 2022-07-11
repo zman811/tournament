@@ -23,8 +23,7 @@ const HomePage: NextPage = () => {
     <Center>
       {isOpen && (
         <Modal
-          overlayOpacity={0.55}
-          overlayBlur={3}
+          overlayBlur={2}
           opened={true}
           onClose={() => {setIsOpen(false)}}
         >
