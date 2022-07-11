@@ -8,6 +8,8 @@ import {
   Text,
   Button,
   Modal,
+  Badge,
+  Group,
 } from "@mantine/core";
 import type { NextPage } from "next";
 import { useState } from "react";
@@ -25,7 +27,9 @@ const HomePage: NextPage = () => {
         <Modal
           overlayBlur={2}
           opened={true}
-          onClose={() => {setIsOpen(false)}}
+          onClose={() => {
+            setIsOpen(false);
+          }}
         >
           Hello, {current}
           {/* current is a placeholder for the current tournament that will be selected whenever the modal is opened */}
@@ -38,14 +42,26 @@ const HomePage: NextPage = () => {
             // Here is maping over each tournament
             return (
               <Card key={i} style={{ width: "500px" }} onClick={() => {}}>
-                <Text>This is a tournament</Text>
+                <Group position="apart">
+                  <Text size="xl" weight="bold">
+                    This is a tournament
+                  </Text>
+                  <Badge>Game</Badge>
+                </Group>
                 <Text>
                   It will have a picture of the game that it is for and you will
                   be able to click on it
                 </Text>
                 <Center>
                   {/* This button will take you to the page for that tournament, by opening a modal with more info and a link to see the page for it */}
-                  <Button onClick={() => {setIsOpen(true); setCurrent(i)}}>See more info</Button>
+                  <Button
+                    onClick={() => {
+                      setIsOpen(true);
+                      setCurrent(i);
+                    }}
+                  >
+                    See more info
+                  </Button>
                 </Center>
               </Card>
             );
