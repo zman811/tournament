@@ -10,8 +10,10 @@ import {
   Modal,
   Badge,
   Group,
+  Space,
 } from "@mantine/core";
 import type { NextPage } from "next";
+import NavbarEle from "./components/Navbar";
 import { useState } from "react";
 
 const HomePage: NextPage = () => {
@@ -22,6 +24,9 @@ const HomePage: NextPage = () => {
     return <div>Loading...</div>;
   }
   return (
+    <>
+    <NavbarEle />
+    <Space h="xl"/>
     <Center>
       {isOpen && (
         <Modal
@@ -69,6 +74,7 @@ const HomePage: NextPage = () => {
         </Stack>
       </Container>
     </Center>
+    </>
   );
 };
 

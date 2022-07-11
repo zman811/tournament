@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Anchor, Button, Container, Grid, Menu } from "@mantine/core";
+import { Anchor, Button, Container, Divider, Grid, Menu, Space } from "@mantine/core";
 import { NextLink } from "@mantine/next";
 import { useUser } from "@auth0/nextjs-auth0";
 
@@ -12,6 +12,7 @@ export default function NavbarEle() {
   }
 
   return (
+    <>
     <Container fluid>
       <Grid justify="center" align="flex-start">
         <Grid.Col span={4}>
@@ -48,5 +49,8 @@ export default function NavbarEle() {
         </Grid.Col>
       </Grid>
     </Container>
+    <Space h="lg"/>
+    <Divider />
+    </>
   );
 }
