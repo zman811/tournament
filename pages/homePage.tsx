@@ -13,7 +13,7 @@ import {
   Space,
 } from "@mantine/core";
 import type { NextPage } from "next";
-import NavbarEle from "./components/Navbar";
+import NavbarEle from "@/components/Navbar";
 import { useState } from "react";
 
 const HomePage: NextPage = () => {

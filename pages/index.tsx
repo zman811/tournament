@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import NavbarEle from "./components/Navbar";
+import NavbarEle from "@/components/Navbar";
 import Head from "next/head";
 import Link from "next/link";
 import { Anchor, Center, Container, Space, Title } from "@mantine/core";

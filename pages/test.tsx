@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import { getSession, withPageAuthRequired } from "@auth0/nextjs-auth0";
 import Head from "next/head";
 import Link from "next/link";
-import NavbarEle from "./components/Navbar";
+import NavbarEle from "@/components/Navbar";
 
 const Test: NextPage = () => {
   return (
