@@ -25,7 +25,15 @@ const Home: NextPage = () => {
           )}
           <Space h="lg" />
           {/* Maybe add in a picture here or something to make the page more appeling */}
-          This is a WIP app for creating and finding teams for tournaments!
+          <Title order={3}>
+            This is a WIP app for creating and finding teams for tournaments!
+          </Title>
+          <Space h="lg" />
+          <Title order={4}>
+            This is the landing page that will show some of that app that you
+            can use without a account as well as have a spot to sign in to use
+            the full app
+          </Title>
         </Container>
       </Center>
     </>
