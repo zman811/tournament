@@ -1,11 +1,15 @@
-import { Badge, Center, Container, SimpleGrid, Text, Title } from "@mantine/core";
+import { Badge, Center, Container, SimpleGrid, Text, Title, Space } from "@mantine/core";
 import type { NextPage } from "next";
+import NavbarEle from "@/components/Navbar";
 import { useRouter } from "next/router";
 
 const TournamentPage: NextPage = () => {
   const router = useRouter()
   const { id } = router.query
   return (
+    <>
+    <NavbarEle />
+    <Space h='lg' />
     <Center>
       <Container style={{textAlign: 'center'}}>
         <Title order={2}>Tournament name will go here</Title>
@@ -20,6 +24,7 @@ const TournamentPage: NextPage = () => {
         </SimpleGrid>
       </Container>
     </Center>
+    </>
   );
 };
 
