@@ -1,7 +1,26 @@
+import { Badge, Center, Container, SimpleGrid, Text, Title } from "@mantine/core";
 import type { NextPage } from "next";
+import { useRouter } from "next/router";
 
 const TournamentPage: NextPage = () => {
-  return (<div>Hello</div>)
-}
+  const router = useRouter()
+  const { id } = router.query
+  return (
+    <Center>
+      <Container style={{textAlign: 'center'}}>
+        <Title order={2}>Tournament name will go here</Title>
+        <Text>Here will be the details of the tournament, id={id}</Text>
+        <Text>Players: </Text>
+        <SimpleGrid cols={3}>
+          <Badge>Name</Badge>
+          <Badge>Name</Badge>
+          <Badge>Name</Badge>
+          <Badge>Name</Badge>
+          {/* This will show each players name and possibly later on allow you to click the name to go to the profile of that player */}
+        </SimpleGrid>
+      </Container>
+    </Center>
+  );
+};
 
-export default TournamentPage
+export default TournamentPage;
