@@ -31,7 +31,7 @@ export default function NavbarEle() {
             <Grid>
               <Grid.Col span={4}></Grid.Col>
               <Grid.Col span={4}>
-                <Link href="/user/${name}">
+                <Link href={`/user/${name}`}>
                   <Anchor>{name}</Anchor>
                 </Link>
               </Grid.Col>
